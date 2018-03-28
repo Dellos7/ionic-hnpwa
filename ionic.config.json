@@ -1,0 +1,8 @@
+{
+  "name": "dellos7-ionic-hnpwa",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
