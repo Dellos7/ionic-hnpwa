@@ -1,0 +1,17 @@
+<!-- Generated template for the NewsListComponent component -->
+
+<ion-list *ngIf="news && news.length > 0">
+  <ion-item *ngFor="let new of news; let i = index">
+    <h1 item-start class="text-color-hn">{{ getItemNumber(i) }}</h1>
+    <h2 class="cursor-pointer" (click)="openNew(new)">{{new.title}}</h2>
+    <p>{{new.time_ago}}</p>
+  </ion-item>
+</ion-list>
+
+<ion-list *ngIf="!news || news.length <= 0">
+  <ion-item *ngFor='let fake of fakeNews' class='fakeItem'>
+    <h1 item-start></h1>
+    <h2></h2>
+    <p></p>
+  </ion-item>
+</ion-list>

@@ -1,17 +1,24 @@
+import { JobsPage } from './../jobs/jobs';
+import { AskPage } from './../ask/ask';
+import { TopPage } from './../top/top';
 import { Component } from '@angular/core';
 
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
+import { NewPage } from '../new/new';
+import { ShowPage } from '../show/show';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  topPage = TopPage;
+  newPage = NewPage;
+  showPage = ShowPage;
+  askPage = AskPage;
+  jobsPage = JobsPage;
 
   constructor() {
 
