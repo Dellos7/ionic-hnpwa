@@ -69,7 +69,7 @@ export enum NodeHnNewTypeEnum {
 export enum NodeHnNewMaxPagesEnum {
   TOP = 10,
   NEW = 10,
-  SHOW = 10,
-  ASK = 10,
-  JOBS = 10
+  SHOW = 2,
+  ASK = 3,
+  JOBS = 1
 }

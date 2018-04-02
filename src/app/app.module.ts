@@ -1,3 +1,4 @@
+import { InfoPage } from './../pages/info/info';
 import { JobsPage } from './../pages/jobs/jobs';
 import { AskPage } from './../pages/ask/ask';
 import { ShowPage } from './../pages/show/show';
@@ -32,6 +33,7 @@ import { NewPage } from '../pages/new/new';
     ShowPage,
     AskPage,
     JobsPage,
+    InfoPage,
     NewsListComponent
   ],
   imports: [
@@ -50,7 +52,8 @@ import { NewPage } from '../pages/new/new';
     ShowPage,
     AskPage,
     JobsPage,
-    TopPage
+    TopPage,
+    InfoPage
   ],
   providers: [
     StatusBar,

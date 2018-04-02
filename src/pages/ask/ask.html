@@ -8,6 +8,11 @@
 
   <ion-navbar color="hacker-news">
     <ion-title>Ask</ion-title>
+    <ion-buttons end>
+      <button ion-button color="light" clear (click)="previousPage()" [disabled]="pageNumber <= 1">< prev</button>
+      <button ion-button color="dark" clear class="cursor-normal">page {{pageNumber}}</button>
+      <button ion-button color="light" clear (click)="nextPage()" [disabled]="pageNumber >= maxPages">next ></button>
+  </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -15,6 +20,6 @@
 
 <ion-content padding>
 
-    <news-list [type]="nodeHnNewTypeEnum.ASK" [pageNumber]="1"></news-list>
+  <news-list #newsList [type]="nodeHnNewTypeEnum.ASK" [pageNumber]="1"></news-list>
 
 </ion-content>

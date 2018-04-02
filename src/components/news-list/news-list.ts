@@ -23,9 +23,14 @@ export class NewsListComponent {
 
   constructor( private nodeHnApiProvider: NodeHnApiProvider, private iab: InAppBrowser ) {
     var self = this;
-    setTimeout(function() {
-      self.retrieve();
-    }, 1000);
+    //setTimeout(function() {
+      //self.retrieve();
+    //}, 1000);
+  }
+
+  ngAfterViewInit() {
+    var self = this;
+    self.retrieve();
   }
 
   public retrieve() {

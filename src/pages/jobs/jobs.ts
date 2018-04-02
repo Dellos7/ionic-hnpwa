@@ -1,5 +1,6 @@
-import { NodeHnNewTypeEnum } from './../../providers/node-hn-api/node-hn-api';
-import { Component } from '@angular/core';
+import { NewsListComponent } from './../../components/news-list/news-list';
+import { NodeHnNewTypeEnum, NodeHnNewMaxPagesEnum } from './../../providers/node-hn-api/node-hn-api';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -16,13 +17,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class JobsPage {
 
+  pageNumber: number = 1;
   nodeHnNewTypeEnum = NodeHnNewTypeEnum;
+  maxPages = NodeHnNewMaxPagesEnum.JOBS;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild('newsList')
+  private newsList: NewsListComponent;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+
+  ionViewDidLoad() {}
+
+  nextPage() {
+    this.pageNumber += 1;
+    this.newsList.pageNumber = this.pageNumber;
+    this.newsList.retrieve();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad JobsPage');
+  previousPage() {
+    this.pageNumber -= 1;
+    this.newsList.pageNumber = this.pageNumber;
+    this.newsList.retrieve();
   }
 
 }

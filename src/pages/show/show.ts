@@ -1,5 +1,5 @@
 import { NewsListComponent } from './../../components/news-list/news-list';
-import { NodeHnNewTypeEnum } from './../../providers/node-hn-api/node-hn-api';
+import { NodeHnNewTypeEnum, NodeHnNewMaxPagesEnum } from './../../providers/node-hn-api/node-hn-api';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -19,6 +19,7 @@ export class ShowPage {
 
   pageNumber: number = 1;
   nodeHnNewTypeEnum = NodeHnNewTypeEnum;
+  maxPages = NodeHnNewMaxPagesEnum.SHOW;
 
   @ViewChild('newsList')
   private newsList: NewsListComponent;

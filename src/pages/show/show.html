@@ -9,8 +9,10 @@
   <ion-navbar color="hacker-news">
     <ion-title>Show</ion-title>
     <ion-buttons end>
-      <ion-label>Page {{pageNumber}}</ion-label>
-    </ion-buttons>
+      <button ion-button color="light" clear (click)="previousPage()" [disabled]="pageNumber <= 1">< prev</button>
+      <button ion-button color="dark" clear class="cursor-normal">page {{pageNumber}}</button>
+      <button ion-button color="light" clear (click)="nextPage()" [disabled]="pageNumber >= maxPages">next ></button>
+  </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -19,17 +21,5 @@
 <ion-content padding>
 
   <news-list #newsList [type]="nodeHnNewTypeEnum.SHOW" [pageNumber]="1"></news-list>
-
-  <ion-fab right bottom>
-    <button ion-fab mini color="hacker-news" (click)="nextPage()">
-      <ion-icon name="fastforward"></ion-icon>
-    </button>
-  </ion-fab>
-
-  <ion-fab left bottom *ngIf="pageNumber > 1">
-    <button ion-fab mini color="hacker-news" (click)="previousPage()">
-      <ion-icon name="rewind"></ion-icon>
-    </button>
-  </ion-fab>
 
 </ion-content>

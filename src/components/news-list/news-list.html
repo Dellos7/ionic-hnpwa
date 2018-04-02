@@ -3,8 +3,8 @@
 <ion-list *ngIf="news && news.length > 0">
   <ion-item *ngFor="let new of news; let i = index">
     <h1 item-start class="text-color-hn">{{ getItemNumber(i) }}</h1>
-    <h2 class="cursor-pointer" (click)="openNew(new)">{{new.title}}</h2>
-    <p>{{new.time_ago}}</p>
+    <h2 class="cursor-pointer" (click)="openNew(new)">{{new.title}} <span class="color-gray">{{new.domain ? "(" + new.domain + ")" : ""}}</span></h2>
+    <p><span class="text-bold">{{new.points}} points by</span> <a class="text-color-hn cursor-pointer">{{new.user}}</a>&nbsp;&nbsp;&nbsp;{{new.time_ago}} | <a class="text-color-hn cursor-pointer">discuss</a></p>
   </ion-item>
 </ion-list>
 

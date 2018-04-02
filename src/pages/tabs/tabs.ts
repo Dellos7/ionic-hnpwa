@@ -1,3 +1,4 @@
+import { InfoPage } from './../info/info';
 import { JobsPage } from './../jobs/jobs';
 import { AskPage } from './../ask/ask';
 import { TopPage } from './../top/top';
@@ -19,6 +20,7 @@ export class TabsPage {
   showPage = ShowPage;
   askPage = AskPage;
   jobsPage = JobsPage;
+  infoPage = InfoPage;
 
   constructor() {
 
