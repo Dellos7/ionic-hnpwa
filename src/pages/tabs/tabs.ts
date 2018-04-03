@@ -1,27 +1,17 @@
-//import { InfoPage } from './../info/info';
-import { JobsPage } from './../jobs/jobs';
-import { AskPage } from './../ask/ask';
-import { TopPage } from './../top/top';
 import { Component } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import { NewPage } from '../new/new';
-import { ShowPage } from '../show/show';
-
+@IonicPage()
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  topPage = TopPage;
-  newPage = NewPage;
-  showPage = ShowPage;
-  askPage = AskPage;
-  //askPage = 'AskPage';
-  jobsPage = JobsPage;
-  //infoPage = InfoPage;
+  topPage = 'TopPage';
+  newPage = 'NewPage';
+  showPage = 'ShowPage';
+  askPage = 'AskPage';
+  jobsPage = 'JobsPage';
   infoPage = 'InfoPage';
 
   constructor() {
