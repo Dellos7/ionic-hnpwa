@@ -10,7 +10,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NodeHnApiProvider } from '../providers/node-hn-api/node-hn-api';
 //import { NewsListComponent } from '../components/news-list/news-list';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { NewPage } from '../pages/new/new';
 
 @NgModule({
   declarations: [
