@@ -1,3 +1,4 @@
+import { AskPageModule } from './../pages/ask/ask.module';
 import { InfoPage } from './../pages/info/info';
 import { JobsPage } from './../pages/jobs/jobs';
 import { AskPage } from './../pages/ask/ask';
@@ -9,7 +10,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -24,7 +24,6 @@ import { NewPage } from '../pages/new/new';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -33,18 +32,18 @@ import { NewPage } from '../pages/new/new';
     ShowPage,
     AskPage,
     JobsPage,
-    InfoPage,
+    //InfoPage,
     NewsListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    //AskPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -53,7 +52,7 @@ import { NewPage } from '../pages/new/new';
     AskPage,
     JobsPage,
     TopPage,
-    InfoPage
+    //InfoPage
   ],
   providers: [
     StatusBar,
